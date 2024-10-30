@@ -9,6 +9,9 @@ Fatpaper 联机大富翁
 大富翁总项目，使用子模块引用各个大富翁部分，支持使用docker运行项目。
 >全局配置请到根目录的`global.config.ts`中修改。
 
+#### 小白食用教程（windows下使用docker desktop部署，使用镜像源免魔法）
+[教程]: https://note.youdao.com/s/1fUq7glx
+
 #### 注意⚠️
 在非localhost网络环境下部署时需要将`global.config.ts`里的`FATPAPER_HOST`修改为对应的地址或域名。
 
