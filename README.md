@@ -3,7 +3,7 @@ Fatpaper 联机大富翁
 捐赠/赞赏途径:
 1. 爱发电平台：https://afdian.com/a/fatpaper;
 2. 赞赏码, 直达作者：
-<img src="https://fatpaper-1304992673.cos.ap-guangzhou.myqcloud.com/blog/appreciate.png" height="600px" width="600px"/>
+<img src="https://monopoly-static-1304992673.cos.ap-guangzhou.myqcloud.com/appreciate.png" height="600px" width="600px"/>
 
 
 大富翁总项目，使用子模块引用各个大富翁部分，支持使用docker运行项目。
