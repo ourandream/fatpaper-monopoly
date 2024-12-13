@@ -22,6 +22,8 @@ jobs:
       # Checkout code
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          submodules: recursive # Fetch Git submodules
 
       # Login to GitHub Container Registry (GHCR)
       - name: Log in to GitHub Container Registry
