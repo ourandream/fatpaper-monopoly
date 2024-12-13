@@ -22,13 +22,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Login to Azure
       - name: Azure Login
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.TEST_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.TEST_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.TEST_AZURE_SUBSCRIPTION_ID }}
 
       # Authenticate with container registry
       - name: Log in to Container Registry
