@@ -52,7 +52,7 @@ jobs:
         with:
           containerAppName: test
           resourceGroup: test1
-          imageToBuild: ghcr.io/${{ github.repository }}/fatpapersite:${{ github.sha }}
+          imageToDeploy: ghcr.io/${{ github.repository }}/fatpapersite:${{ github.sha }}
           registryUrl: ghcr.io
           registryUsername: ${{ github.actor }}
           registryPassword: ${{ secrets.GITHUB_TOKEN }}
