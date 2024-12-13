@@ -29,15 +29,17 @@ jobs:
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      # Build Docker images locally
       - name: Build Docker Images
         run: |
           docker compose -f ./docker-compose-local.yml -p fatpapersite build
-
-      # Tag the image for GHCR
+      
+      - name: List Docker Images
+        run: docker images
+      
       - name: Tag Docker Images
         run: |
-          docker tag fatpapersite_service-name ghcr.io/${{ github.repository }}/fatpapersite:${{ github.sha }}
+          docker tag fatpaper/fatpaper-web ghcr.io/${{ github.repository }}/fatpapersite:${{ github.sha }}
+
 
       # Push Docker images to GHCR
       - name: Push Docker Images to GHCR
