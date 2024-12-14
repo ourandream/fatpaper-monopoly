@@ -7,9 +7,7 @@ services:
       context: ./
       dockerfile: dockerfile-web
     ports:
-      - "80:80"
-      - "81:81"
-      - "82:82"
+      - "80:443"
     restart: always
     environment:
       - TZ=Asia/Shanghai
@@ -22,8 +20,6 @@ services:
     build:
       context: ./
       dockerfile: dockerfile-user-server
-    ports:
-      - "83:83"
     depends_on:
       mysql:
         condition: service_healthy
@@ -40,9 +36,6 @@ services:
     build:
       context: ./
       dockerfile: dockerfile-monopoly-server
-    ports:
-      - "84:84"
-      - "85:85"
     depends_on:
       mysql:
         condition: service_healthy
@@ -68,8 +61,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - TZ=Asia/Shanghai
-    ports:
-      - "3306:3306"
     restart: always
     healthcheck:
       test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot" ]
