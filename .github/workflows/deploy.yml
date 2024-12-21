@@ -57,10 +57,10 @@ jobs:
       - name: Deploy to Azure Container Apps
         uses: azure/container-apps-deploy-action@v2
         with:
-          subscription-id: ${{ secrets.TEST_AZURE_SUBSCRIPTION_ID }}
           containerAppName: test
           resourceGroup: test_1
           imageToDeploy: ghcr.io/${{ github.repository }}/fatpapersite:${{ github.sha }}
           registryUrl: ghcr.io
           registryUsername: ${{ github.actor }}
           registryPassword: ${{ secrets.GITHUB_TOKEN }}
+          targetPort: 80
