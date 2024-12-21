@@ -7,9 +7,9 @@ services:
       context: ./
       dockerfile: dockerfile-web
     ports:
-      - "8080:80"
-      - "8081:81"
-      - "8082:82"
+      - "8080:8080"
+      - "8081:8081"
+      - "8082:8082"
     restart: always
     environment:
       - TZ=Asia/Shanghai
